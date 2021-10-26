@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>安装 | YMS-UI</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/msui/assets/css/0.styles.819eaea3.css" as="style"><link rel="preload" href="/msui/assets/js/app.c56ba57e.js" as="script"><link rel="preload" href="/msui/assets/js/2.83dfb791.js" as="script"><link rel="preload" href="/msui/assets/js/9.bd0a5c22.js" as="script"><link rel="prefetch" href="/msui/assets/js/10.6fa6e2e7.js"><link rel="prefetch" href="/msui/assets/js/11.d312113c.js"><link rel="prefetch" href="/msui/assets/js/3.36c1c4a5.js"><link rel="prefetch" href="/msui/assets/js/4.ed729275.js"><link rel="prefetch" href="/msui/assets/js/5.23afe523.js"><link rel="prefetch" href="/msui/assets/js/6.7b1248c6.js"><link rel="prefetch" href="/msui/assets/js/7.8709c633.js"><link rel="prefetch" href="/msui/assets/js/8.7a78b22e.js">
+    <link rel="stylesheet" href="/msui/assets/css/0.styles.819eaea3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/msui/" aria-current="page" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">YMS-UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/msui/accumulate/" class="nav-link">
+  gitHub
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/msui/accumulate/" class="nav-link">
+  gitHub
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/msui/" aria-current="page" class="active sidebar-link">起步</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/msui/#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/msui/#快速上手" class="sidebar-link">快速上手</a></li></ul></li><li><a href="/msui/adaptbox/" class="sidebar-link">AdaptBox</a></li><li><a href="/msui/adaptboxtable/" class="sidebar-link">AdaptBoxTable</a></li><li><a href="/msui/mult-area/" class="sidebar-link">MultArea</a></li><li><a href="/msui/flip-card/" class="sidebar-link">FlipCard</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>安装为最新版本，如果没翻墙，建议使用yarn</p></div> <div class="language- extra-class"><pre class="language-text"><code>npm i yms-ui -S
+</code></pre></div><h2 id="快速上手"><a href="#快速上手" class="header-anchor">#</a> 快速上手</h2> <h4 id="完全引入"><a href="#完全引入" class="header-anchor">#</a> 完全引入</h4> <p>你可以引入整个 Element，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 Element。</p> <div class="language-js extra-class"><pre class="language-js"><code> <span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+ <span class="token keyword">import</span> <span class="token constant">YMSUI</span> <span class="token keyword">from</span> <span class="token string">'yms-ui'</span><span class="token punctuation">;</span>
+ <span class="token keyword">import</span> <span class="token string">&quot;yms-ui/lib/style/index.css&quot;</span><span class="token punctuation">;</span>
+ <span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span>
+
+ Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token constant">YMSUI</span><span class="token punctuation">)</span>
+
+ <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+   el<span class="token operator">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+   <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token parameter">h</span> <span class="token operator">=&gt;</span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="按需引入"><a href="#按需引入" class="header-anchor">#</a> 按需引入</h4> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> AdaptBox<span class="token punctuation">,</span> MultArea <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'yms-ui'</span>
+  <span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span>
+
+  Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span>AdaptBox<span class="token punctuation">.</span>name<span class="token punctuation">,</span> AdaptBox<span class="token punctuation">)</span>
+  Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span>MultArea<span class="token punctuation">.</span>name<span class="token punctuation">,</span> MultArea<span class="token punctuation">)</span>
+  <span class="token comment">/* 或写为
+  * Vue.use(Button)
+  * Vue.use(Select)
+  */</span>
+
+  <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el<span class="token operator">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token parameter">h</span> <span class="token operator">=&gt;</span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/msui/adaptbox/">
+        AdaptBox
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/msui/assets/js/app.c56ba57e.js" defer></script><script src="/msui/assets/js/2.83dfb791.js" defer></script><script src="/msui/assets/js/9.bd0a5c22.js" defer></script>
+  </body>
+</html>

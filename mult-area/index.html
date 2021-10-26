@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>YMS-UI</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/msui/assets/css/0.styles.819eaea3.css" as="style"><link rel="preload" href="/msui/assets/js/app.c56ba57e.js" as="script"><link rel="preload" href="/msui/assets/js/2.83dfb791.js" as="script"><link rel="preload" href="/msui/assets/js/11.d312113c.js" as="script"><link rel="prefetch" href="/msui/assets/js/10.6fa6e2e7.js"><link rel="prefetch" href="/msui/assets/js/3.36c1c4a5.js"><link rel="prefetch" href="/msui/assets/js/4.ed729275.js"><link rel="prefetch" href="/msui/assets/js/5.23afe523.js"><link rel="prefetch" href="/msui/assets/js/6.7b1248c6.js"><link rel="prefetch" href="/msui/assets/js/7.8709c633.js"><link rel="prefetch" href="/msui/assets/js/8.7a78b22e.js"><link rel="prefetch" href="/msui/assets/js/9.bd0a5c22.js">
+    <link rel="stylesheet" href="/msui/assets/css/0.styles.819eaea3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/msui/" class="home-link router-link-active"><!----> <span class="site-name">YMS-UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/msui/accumulate/" class="nav-link">
+  gitHub
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/msui/accumulate/" class="nav-link">
+  gitHub
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/msui/" aria-current="page" class="sidebar-link">起步</a></li><li><a href="/msui/adaptbox/" class="sidebar-link">AdaptBox</a></li><li><a href="/msui/adaptboxtable/" class="sidebar-link">AdaptBoxTable</a></li><li><a href="/msui/mult-area/" aria-current="page" class="active sidebar-link">MultArea</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/msui/mult-area/#基础用法" class="sidebar-link">基础用法</a></li><li class="sidebar-sub-header"><a href="/msui/mult-area/#attributes" class="sidebar-link">Attributes</a></li></ul></li><li><a href="/msui/flip-card/" class="sidebar-link">FlipCard</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>MultArea 多数据按钮组切换</p> <h2 id="基础用法"><a href="#基础用法" class="header-anchor">#</a> 基础用法</h2> <div class="el-card is-always-shadow"><div class="el-card__header"><div><span>组件效果</span> <button type="button" class="el-button el-button--text" style="float:right;padding:0px;"><!----><!----><span>复制代码</span></button> <div>
+          当前值： []
+          <div value="" class="ms-mult-area"><div class="ms-mult-area__btn-group"><div><button type="button" class="el-button el-button--primary el-button--small ms-mult-area__btn-group ms-mult-area__btn-group--defalut"><!----><!----><span>
+        运单号</span></button></div><div><button type="button" class="el-button el-button--small ms-mult-area__btn-group ms-mult-area__btn-group--defalut"><!----><!----><span>
+        工单编码</span></button></div><div><button type="button" class="el-button el-button--small ms-mult-area__btn-group ms-mult-area__btn-group--defalut"><!----><!----><span>
+        差错编码</span></button></div></div> <div class="ms-mult-area__text-area"><div class="el-textarea"><textarea autocomplete="off" placeholder="请输入内容" class="el-textarea__inner"></textarea><!----></div> <span class="ms-mult-area__promt">
+      0/20
+    </span></div></div> <button type="button" class="el-button el-button--default"><!----><!----><span>重置</span></button></div></div></div><div class="el-card__body"></div></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    当前值： {{value}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mult-area</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>multArea<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:labels</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>[<span class="token punctuation">'</span>运单号<span class="token punctuation">'</span>, <span class="token punctuation">'</span>工单编码<span class="token punctuation">'</span>, <span class="token punctuation">'</span>差错编码<span class="token punctuation">'</span>]<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>value<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:default-index</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>reset<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>重置<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      value<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>multArea<span class="token punctuation">.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>  
+</code></pre></div><h2 id="attributes"><a href="#attributes" class="header-anchor">#</a> Attributes</h2> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认</th></tr></thead> <tbody><tr><td>labels</td> <td>按钮组名称</td> <td>Array</td> <td></td> <td>[]</td></tr> <tr><td>defaultIndex</td> <td>默认选中按钮index</td> <td>Number</td> <td></td> <td>0</td></tr> <tr><td>blankValue</td> <td>是否去除空格</td> <td>Boolean</td> <td>true/false</td> <td>true</td></tr> <tr><td>max</td> <td>最大输入数据个数</td> <td>Number</td> <td></td> <td>20</td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/msui/adaptboxtable/" class="prev">
+        AdaptBoxTable
+      </a></span> <span class="next"><a href="/msui/flip-card/">
+        FlipCard
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/msui/assets/js/app.c56ba57e.js" defer></script><script src="/msui/assets/js/2.83dfb791.js" defer></script><script src="/msui/assets/js/11.d312113c.js" defer></script>
+  </body>
+</html>
